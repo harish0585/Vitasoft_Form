@@ -1,0 +1,19 @@
+.box
+{
+    max-width: max-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.gaps
+{
+    display: flex;
+    gap: 10px;
+}
+
+.countryState
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
