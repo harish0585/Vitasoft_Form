@@ -1,7 +1,9 @@
 # Getting Started with Create React App
 
 This project is contained of Backend and Frontend parts
+###
 Backend - Nodejs, Mongodb(local database), Express, JWTtoken
+###
 Frontend - React, Redux
 
 
@@ -15,4 +17,10 @@ Frontend - npm start
 
 Material-UI
 Module.CSS
+
+###
+Pages - Register, Login, Form
+
+###
+For getting all countries and states to fill the form - used External Library(https://countrystatecity.in/docs/)
 
