@@ -3,6 +3,10 @@ import React from 'react'
 import { useState } from 'react'
 import axios from "axios";
 import { useEffect } from 'react';
+import { clearErrors, register } from '../redux/actions/userActions';
+import { useDispatch, useSelector } from 'react-redux'
+import { Navigate } from 'react-router-dom';
+
 
 
 const initData = {
@@ -14,8 +18,30 @@ const initData = {
 function Register() {
    
     const [data, setData] = useState(initData);
+    const [regis, setRegis] = useState(false);
 
     const {name, email, password} = data;
+
+    const dispatch = useDispatch();
+
+      const { isAuthenticated, error, loading, user } = useSelector(
+        (state) => state.auth
+      );
+      console.log(user, "user123")
+   
+      useEffect(() => {
+        // if (isAuthenticated) {
+        //  <Navigate to="/"/>
+        // }
+
+        // if (error) {
+        //   alert(error);
+        //   dispatch(clearErrors());
+        // }
+      }, [dispatch, alert, isAuthenticated, error, Navigate, regis]);
+
+      
+
 
     const handleChange = (e) => {
       const {name, value} = e.target;
@@ -24,18 +50,19 @@ function Register() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(data);
-      registerData()
+      console.log(data, "data");
+      setRegis(!regis);
+      dispatch(register(data)); 
     }
 
-    const registerData = () => {
-        try {
-           const res =  axios.post("http://localhost:4000/api/v1/register", data);
-           console.log(res,"res")
-        } catch (error) {
+    // const registerData = () => {
+    //     try {
+    //        const res =  axios.post("http://localhost:4000/api/v1/register", data);
+    //        console.log(res,"res")
+    //     } catch (error) {
             
-        }
-    }
+    //     }
+    // }
 
 
   return (
