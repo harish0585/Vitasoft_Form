@@ -2,7 +2,7 @@
 
 This project is contained of Backend and Frontend parts
 ###
-Backend - Nodejs, Mongodb(local database), Express, JWTtoken
+Backend - Nodejs, Mongodb(local database), Express, JWTtoken, Mongoose(used to connect local database)
 ###
 Frontend - React, Redux
 
