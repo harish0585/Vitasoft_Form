@@ -7,7 +7,8 @@ Frontend - React, Redux
 
 ### `To run the files in the respective folders`
 
-Backend - npm run dev\n
+Backend - npm run dev
+###
 Frontend - npm start
 
 ### `Styling`
